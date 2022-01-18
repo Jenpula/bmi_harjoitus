@@ -19,15 +19,23 @@ function App() {
       <h2>Calculating body mass index</h2>
       <div>
         <label>Height</label>
-        <input type='number' value={Height} onChange={e => setHeight(e.target.value)}></input>
+        <input 
+          type='number'
+          step='0.01'
+          value={Height} 
+          onChange={e => setHeight(e.target.value)}></input>
       </div>
       <div>
         <label>Weight</label>
-        <input type='number' value={Weight} onChange={e => setWeight(e.target.value)}></input>
+        <input 
+        type='number' 
+        step='1' 
+        value={Weight} 
+        onChange={e => setWeight(e.target.value)}></input>
       </div>
       <div>
         <label>Vastaus</label>
-        <output>{Vastaus.toFixed(2)}</output>
+        <output>{Vastaus.toFixed(1)}</output>
       </div>
       <button>Laske</button>
       </form>
